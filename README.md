@@ -14,7 +14,7 @@ use utf8;
 use lib '/home/ledscreen/ledscreen';
 use LedScreen;
 
-my $ledscreen = LedScreen->new();
+my $ledscreen = LedScreen->new(ledscreen_ip => '127.0.0.1');
 
 $ledscreen->send_ledscreen_message({message => $ARGV[0] . $ledscreen->standard_message});
 
